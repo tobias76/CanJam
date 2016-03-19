@@ -1,10 +1,29 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
 
-public class IntRange : MonoBehaviour {
+[Serializable]
+public class IntRange
+{
+
+    public int minimumValue;
+    public int maximumValue;
+
+    public IntRange(int min, int max)
+    {
+        minimumValue = min;
+        maximumValue = max;
+    }
+
+    public int randomNumber
+    {
+        get
+        {
+            return UnityEngine.Random.Range(minimumValue, maximumValue);
+        }
+    }
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 	
 	}
 	
