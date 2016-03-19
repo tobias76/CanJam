@@ -62,7 +62,7 @@ public class Corridor : MonoBehaviour
 	}
 
 
-    public void SetupCorridor(Room room, IntRange corridorLength, IntRange roomWidth, IntRange roomHeight, int columns, int rows, bool firstCorridor)
+    public void SetupCorridor(Room room, IntRange length, IntRange roomWidth, IntRange roomHeight, int columns, int rows, bool firstCorridor)
     {
         // Set a random direction
         direction = (Direction)UnityEngine.Random.Range(0, 4);
@@ -86,7 +86,7 @@ public class Corridor : MonoBehaviour
         }
 
         // Set a random length.
-        corridorLength = length.Random;
+        corridorLength = length.randomNumber;
 
         int maxLength = length.maximumValue;
 
@@ -109,6 +109,7 @@ public class Corridor : MonoBehaviour
             case Direction.West:
                 xStart = room.xPosition;
                 yStart = UnityEngine.Random.Range(room.yPosition, room.yPosition + room.roomHeight);
+
                 maxLength = xStart - roomWidth.minimumValue;
                 break;
         }

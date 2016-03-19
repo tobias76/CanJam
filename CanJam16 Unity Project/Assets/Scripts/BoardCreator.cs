@@ -24,7 +24,7 @@ public class BoardCreator : MonoBehaviour {
     public GameObject[] wallTiles;
     public GameObject[] outerWalls;
 
-    public GameObject[] player;
+    public GameObject player;
 
     private TileType[][] tile;
     private Room[] rooms;
@@ -111,7 +111,7 @@ public class BoardCreator : MonoBehaviour {
             if(i == rooms.Length * .5f)
             {
                 Vector3 playerPosition = new Vector3(rooms[i].xPosition, rooms[i].yPosition, 0);
-                Instantiate(player, Quaternion.identity);
+                Instantiate(player, playerPosition, Quaternion.identity);
             }
         }
     }
