@@ -1,13 +1,9 @@
 ﻿using UnityEngine;
-using System;
 
 // Enum to specify the corridors direction
 public enum Direction
 {
-    North,
-    East,
-    South,
-    West
+    North, East, South, West,
 }
 
 public class Corridor : MonoBehaviour
@@ -39,11 +35,11 @@ public class Corridor : MonoBehaviour
     {
         get
         {
-            if(direction == Direction.East || direction == Direction.West)
+            if (direction == Direction.East || direction == Direction.West)
             {
                 return yStart;
             }
-            if(direction == Direction.North)
+            if (direction == Direction.North)
             {
                 return yStart + corridorLength - 1;
             }
@@ -51,21 +47,10 @@ public class Corridor : MonoBehaviour
         }
     }
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-
     public void SetupCorridor(Room room, IntRange length, IntRange roomWidth, IntRange roomHeight, int columns, int rows, bool firstCorridor)
     {
         // Set a random direction
-        direction = (Direction)UnityEngine.Random.Range(0, 4);
+        direction = (Direction)Random.Range(0, 4);
 
         /*
         This section of code finds the direction opposite the one at the rooms exit. This then casts the previous direction
@@ -80,6 +65,7 @@ public class Corridor : MonoBehaviour
         {
             //This will rotate the direction 90 degrees clockwise.
             int directionInt = (int)direction;
+
             directionInt++;
             directionInt = directionInt % 4;
             direction = (Direction)directionInt;
@@ -103,17 +89,17 @@ public class Corridor : MonoBehaviour
             case Direction.East:
                 xStart = room.xPosition + room.roomWidth;
                 yStart = UnityEngine.Random.Range(room.yPosition, room.yPosition + room.roomHeight - 1);
+
                 maxLength = columns - xStart - roomWidth.minimumValue;
                 break;
 
             case Direction.West:
                 xStart = room.xPosition;
-                yStart = UnityEngine.Random.Range(room.yPosition, room.yPosition + room.roomHeight);
+                yStart = Random.Range(room.yPosition, room.yPosition + room.roomHeight);
 
                 maxLength = xStart - roomWidth.minimumValue;
                 break;
         }
-
         corridorLength = Mathf.Clamp(corridorLength, 1, maxLength);
     }
 }

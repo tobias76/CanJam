@@ -13,16 +13,6 @@ public class Room : MonoBehaviour
     // Direction of the corridor entering the room.
     public Direction enteringCorridor;
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     // This function sets up the first room.
     public void SetupRoom(IntRange widthRange, IntRange heightRange, int columns, int rows)
     {
@@ -60,6 +50,7 @@ public class Room : MonoBehaviour
 
                 // Clamp this to prevent the room going off the board.
                 xPosition = Mathf.Clamp(xPosition, 0, columns - roomWidth);
+
                 break;
 
             case Direction.East:
@@ -69,6 +60,7 @@ public class Room : MonoBehaviour
 
                 yPosition = Random.Range(corridor.endPositionY - roomHeight + 1, corridor.endPositionY);
                 yPosition = Mathf.Clamp(yPosition, 0, rows - roomHeight);
+
                 break;
 
             case Direction.South:
@@ -78,6 +70,7 @@ public class Room : MonoBehaviour
 
                 xPosition = Random.Range(corridor.endPositionX - roomWidth + 1, corridor.endPositionX);
                 xPosition = Mathf.Clamp(xPosition, 0, columns - roomWidth);
+
                 break;
 
             case Direction.West:
@@ -86,6 +79,7 @@ public class Room : MonoBehaviour
 
                 yPosition = UnityEngine.Random.Range(corridor.endPositionY - roomHeight + 1, corridor.endPositionY);
                 yPosition = Mathf.Clamp(yPosition, 0, rows - roomHeight);
+
                 break;
         }
     }

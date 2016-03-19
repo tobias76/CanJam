@@ -20,15 +20,4 @@ public class IntRange
             return UnityEngine.Random.Range(minimumValue, maximumValue);
         }
     }
-
-	// Use this for initialization
-	void Start ()
-    {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
