@@ -10,8 +10,20 @@ public class ScoreUIScript : MonoBehaviour {
     //finds text box
     Text text;
 
+    public static void storeHighScore()
+    {
+        int oldHighscore = PlayerPrefs.GetInt("highscore", 0);
+
+        if(score > oldHighscore)
+        {
+            Debug.Log(score);
+            PlayerPrefs.SetInt("highscore", score);
+        }
+    }
+
 	//initialises score
-	void Awake() {
+	void Awake()
+    {
         text = GetComponent<Text>();
         score = 0;
 	}

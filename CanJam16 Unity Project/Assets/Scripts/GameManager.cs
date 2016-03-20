@@ -29,9 +29,6 @@ namespace Completed
                 //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
                 Destroy(gameObject);
 
-            //Sets this to not be destroyed when reloading scene
-            //DontDestroyOnLoad(gameObject);
-
             //Get a component reference to the attached BoardManager script
             boardScript = GetComponent<BoardManager>();
 

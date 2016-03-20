@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class PlayerScript : MonoBehaviour
     //level var
     public int level = 0;
 
+    ScoreUIScript scoreUI = new ScoreUIScript();
     //resets health
     void Awake()
     {
@@ -39,6 +41,7 @@ public class PlayerScript : MonoBehaviour
             if (ScoreUIScript.score > 0)
             {
                 ScoreUIScript.score -= scoreDamage;
+
                 if (ScoreUIScript.score < 0)
                 {
                     ScoreUIScript.score = 0;
@@ -51,8 +54,8 @@ public class PlayerScript : MonoBehaviour
         }
         if(coll.gameObject.tag == "Exit")
         {
-            Debug.Log("Exit hole touched");
-            Application.LoadLevel(Application.loadedLevel);
+            ScoreUIScript.score += 1000;
+            SceneManager.LoadScene(Application.loadedLevel);
         }
         if(coll.gameObject.tag == "Loot")
         {
@@ -114,6 +117,7 @@ public class PlayerScript : MonoBehaviour
         //death
         if (playerHealth <= 0)
         {
+            ScoreUIScript.storeHighScore();
             Destroy(gameObject);
         }
     }
