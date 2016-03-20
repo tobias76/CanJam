@@ -49,6 +49,10 @@ public class PlayerScript : MonoBehaviour
                 playerHealth -= healthDamage;
             }
         }
+        if(coll.gameObject.tag == "Exit")
+        {
+            Debug.Log("Exit hole touched");
+        }
     }
 
     void Update()
