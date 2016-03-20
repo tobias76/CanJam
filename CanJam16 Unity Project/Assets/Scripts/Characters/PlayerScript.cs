@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour
     private Vector2 Left = new Vector2(-1, 0);
     private Vector2 Right = new Vector2(1, 0);
     private Vector2 Up = new Vector2(0, 1);
-    private Vector2 Down = new Vector2(1, 0);
+    private Vector2 Down = new Vector2(0, -1);
 
     //level var
     public int level = 0;
