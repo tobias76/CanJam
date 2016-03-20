@@ -53,6 +53,12 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.Log("Exit hole touched");
         }
+        if(coll.gameObject.tag == "Loot")
+        {
+            ScoreUIScript.score += 500;
+            Debug.Log(ScoreUIScript.score);
+            Destroy(coll.gameObject);
+        }
     }
 
     void Update()
