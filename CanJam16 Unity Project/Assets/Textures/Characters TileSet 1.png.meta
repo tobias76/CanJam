@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 00e656031f62d314b912486154918ed7
-timeCreated: 1458447400
+timeCreated: 1458449284
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -20,6 +20,8 @@ TextureImporter:
     21300026: Characters TileSet 1_13
     21300028: Characters TileSet 1_14
     21300030: Characters TileSet 1_15
+    21300032: Characters TileSet 1_16
+    21300034: Characters TileSet 1_17
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -66,17 +68,6 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Characters TileSet 1_0
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 138
-        width: 20
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
     - name: Characters TileSet 1_1
       rect:
         serializedVersion: 2
@@ -85,7 +76,7 @@ TextureImporter:
         width: 20
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Characters TileSet 1_2
@@ -96,18 +87,7 @@ TextureImporter:
         width: 20
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Characters TileSet 1_3
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 128
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Characters TileSet 1_4
@@ -115,21 +95,10 @@ TextureImporter:
         serializedVersion: 2
         x: 27
         y: 120
-        width: 10
+        width: 5
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Characters TileSet 1_5
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 97
-        width: 28
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Characters TileSet 1_6
@@ -140,7 +109,7 @@ TextureImporter:
         width: 28
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Characters TileSet 1_7
@@ -151,40 +120,7 @@ TextureImporter:
         width: 22
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Characters TileSet 1_8
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 78
-        width: 20
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Characters TileSet 1_9
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 78
-        width: 22
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Characters TileSet 1_10
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 74
-        width: 20
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Characters TileSet 1_11
@@ -195,7 +131,7 @@ TextureImporter:
         width: 4
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Characters TileSet 1_12
@@ -206,29 +142,7 @@ TextureImporter:
         width: 4
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Characters TileSet 1_13
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 43
-        width: 22
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: Characters TileSet 1_14
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 55
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: Characters TileSet 1_15
@@ -239,7 +153,106 @@ TextureImporter:
         width: 7
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Characters TileSet 1_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 120
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Characters TileSet 1_17
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 55
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Characters TileSet 1_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 97
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Characters TileSet 1_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 138
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Characters TileSet 1_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 138
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Characters TileSet 1_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 78
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Characters TileSet 1_9
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 78
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Characters TileSet 1_10
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 78
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Characters TileSet 1_13
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 42
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

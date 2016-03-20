@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 namespace Completed
 {
@@ -10,8 +11,9 @@ namespace Completed
 
         public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
         private BoardManager boardScript;                       //Store a reference to our BoardManager which will set up the level.
-        private int level = 1;                                  //Current level number, expressed in game as "Day 1".
+        private int level = 10;                                  //Current level number, expressed in game as "Day 1".
 
+        bool doingSetup;
         //Awake is always called before any Start functions
         void Awake()
         {
@@ -28,7 +30,7 @@ namespace Completed
                 Destroy(gameObject);
 
             //Sets this to not be destroyed when reloading scene
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
 
             //Get a component reference to the attached BoardManager script
             boardScript = GetComponent<BoardManager>();
@@ -40,17 +42,27 @@ namespace Completed
         //Initializes the game for each level.
         void InitGame()
         {
+            doingSetup = true;
+
             //Call the SetupScene function of the BoardManager script, pass it current level number.
             boardScript.SetupScene(level);
 
         }
 
+        private void onLevelWasLoaded(int index)
+        {
+            level++;
 
+            InitGame();
+        }
 
         //Update is called every frame.
         void Update()
         {
+            if(doingSetup)
+            {
 
+            }
         }
     }
 }

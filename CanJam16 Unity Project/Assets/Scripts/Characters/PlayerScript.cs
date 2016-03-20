@@ -52,6 +52,7 @@ public class PlayerScript : MonoBehaviour
         if(coll.gameObject.tag == "Exit")
         {
             Debug.Log("Exit hole touched");
+            Application.LoadLevel(Application.loadedLevel);
         }
         if(coll.gameObject.tag == "Loot")
         {

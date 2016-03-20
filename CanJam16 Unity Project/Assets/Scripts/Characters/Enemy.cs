@@ -5,35 +5,37 @@ public class Enemy : MonoBehaviour
 {
 
     public Transform target;
+    public Transform entity;
     public int moveSpeed;
-    public int maxDistance;
-
-    private Transform myTransform;
-
-    public void Awake()
-    {
-        myTransform = transform;
-    }
+    public int rotation;
+    
 
     // Use this for initialization
     void Start()
     {
-        maxDistance = 2;
+        target = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(target.position, myTransform.position) > maxDistance)
+        if (target != null)
         {
-            // Get a direction vector from us to the target
-            Vector3 enemyDirection = target.position - myTransform.position;
+            Vector3 dir = target.position - transform.position;
+            // Only needed if objects don't share 'z' value.
+            dir.z = 0.0f;
 
-            // Normalize it so that it's a unit direction vector
-            enemyDirection.Normalize();
+            // Get Angle in Radians
+            float AngleRad = Mathf.Atan2(target.transform.position.y - entity.transform.position.y, target.transform.position.x - entity.transform.position.x);
+            // Get Angle in Degrees
+            float AngleDeg = (270 / Mathf.PI) * AngleRad;
+            // Rotate Object
+            this.transform.rotation = Quaternion.Euler(0, 0, AngleDeg);
 
-            // Move ourselves in that direction
-            myTransform.position += enemyDirection * moveSpeed * Time.deltaTime;
+            //Move Towards Target
+            transform.position += (target.position - transform.position).normalized
+                * moveSpeed * Time.deltaTime;
         }
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 }
