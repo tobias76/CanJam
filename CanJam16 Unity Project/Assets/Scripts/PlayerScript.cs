@@ -14,6 +14,12 @@ public class PlayerScript : MonoBehaviour
     public int scoreDamage = 100;
     public int healthDamage = 5;
 
+    // Directions
+    private Vector2 Left = new Vector2(-1, 0);
+    private Vector2 Right = new Vector2(1, 0);
+    private Vector2 Up = new Vector2(0, 1);
+    private Vector2 Down = new Vector2(1, 0);
+
     //level var
     public int level = 0;
 
@@ -48,24 +54,24 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         //input controls
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            direction = new Vector2(-1, 0);
+            direction = Left;
         }
 
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            direction = new Vector2(1, 0);
+            direction = Right;
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            direction = new Vector2(0, 1);
+            direction = Up;
         }
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
-            direction = new Vector2(0, -1);
+            direction = Down;
         }
 
         //movement
